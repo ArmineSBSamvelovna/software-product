@@ -2,7 +2,7 @@ E-commerce Little Store:
 
 Construir uma e-commerce, usando a ferramenta DotNet CLI e a ferramenta Create-React-App. 
 
-1.Configurando o ambiente do desenvolvedor
+1.Configurando o ambiente de desenvolvimento
 
 2.Criando um aplicativo .Net WebAPI usando a CLI dotnet
 
