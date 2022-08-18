@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t67efZYZNYol1j34Uqt0GiYrrx9dg6KhSZ9spH2TAfKiJ06NGTzKgfSuDruiC1bPKd9kskrtPwGP3FO1bUnf2g==",
+  "dgSpecHash": "52sAhVH7yoji8kaDhJqKWvMUD3Hg9urJi9MyHv/749itSEASpX4/xFrFVgX6SOr/KwvKOekT8GrdAiXjiFFKRw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Armin\\OneDrive\\Área de Trabalho\\Impacta\\software-product\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Armin\\OneDrive\\Área de Trabalho\\Impacta\\software-product\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Armin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Armin\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.8\\microsoft.data.sqlite.core.6.0.8.nupkg.sha512",
