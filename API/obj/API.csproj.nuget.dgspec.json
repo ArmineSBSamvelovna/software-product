@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Armin\\OneDrive\\Área de Trabalho\\Impacta\\software-product\\API\\API.csproj": {}
+    "C:\\Users\\armin_3h8nlxy\\OneDrive\\Рабочий стол\\software-product\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Armin\\OneDrive\\Área de Trabalho\\Impacta\\software-product\\API\\API.csproj": {
+    "C:\\Users\\armin_3h8nlxy\\OneDrive\\Рабочий стол\\software-product\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Armin\\OneDrive\\Área de Trabalho\\Impacta\\software-product\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\armin_3h8nlxy\\OneDrive\\Рабочий стол\\software-product\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Armin\\OneDrive\\Área de Trabalho\\Impacta\\software-product\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Armin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Armin\\OneDrive\\Área de Trabalho\\Impacta\\software-product\\API\\obj\\",
+        "projectPath": "C:\\Users\\armin_3h8nlxy\\OneDrive\\Рабочий стол\\software-product\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\armin_3h8nlxy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\armin_3h8nlxy\\OneDrive\\Рабочий стол\\software-product\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Armin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\armin_3h8nlxy\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
