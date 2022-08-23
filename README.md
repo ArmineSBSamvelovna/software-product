@@ -12,7 +12,7 @@ Tecnologias:
 8. ASPNETCore Identity para autenticação
 
 
-Rodar Back no nivel API > dotnet watch run
+Rodar Back no nivel API > dotnet watch run <br>
 Rodar Front no nivel client > npm start
 
 Gitflow:
