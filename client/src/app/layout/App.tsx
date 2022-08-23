@@ -1,6 +1,5 @@
-import React from "react";
 import { useEffect, useState } from "react";
-import { Product } from "./product";
+import { Product } from "../../product";
 
 
 function App() {
