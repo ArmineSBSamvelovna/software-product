@@ -2,7 +2,7 @@ import { AppBar, Toolbar, Typography } from "@mui/material";
 
 export default function Header() {
     return (
-        <AppBar position='static'>
+        <AppBar position='static' sx={{mb: 4, backgroundColor: '#4ad219'}}>
             <Toolbar>
                 <Typography variant='h6'>
                     Little Store
