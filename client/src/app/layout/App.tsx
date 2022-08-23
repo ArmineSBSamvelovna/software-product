@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import Catalog from "../../features/catalog/Catalog";
 import { Product } from "../../product";
@@ -25,10 +26,10 @@ function App() {
 
   }
   return (
-    <div>
-      <h1>Little Store</h1>
+    <>
+      <Typography variant="h1">Little Store</Typography>
       <Catalog products={products} addProduct={addProduct}/>
-    </div>
+    </>
   );
 }
 
