@@ -1,4 +1,4 @@
-import { AppBar, StyledEngineProvider, Switch, Toolbar, Typography } from "@mui/material";
+import { AppBar, Switch, Toolbar, Typography } from "@mui/material";
 
 
 interface Props {
@@ -10,6 +10,7 @@ export default function Header({darkMode, handleThemeChange}: Props) {
     return (
         <AppBar position='static' sx={{ mb: 4 }}>
             <Toolbar>
+                <img src="../images/logo.svg" className="App-logo" alt="logo" />
                 <Typography variant='h6'>
                     Little Store
                 </Typography>
