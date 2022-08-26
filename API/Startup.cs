@@ -50,7 +50,7 @@ namespace API
             app.UseRouting();
             app.UseCors(opt => 
             {
-                opt.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://0c03-2804-431-c7f4-db6b-4bd-a503-757b-4f47.sa.ngrok.io"); //front http://localhost:3000
+                opt.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000"); //front http://localhost:3000
             });
 
             app.UseAuthorization();
