@@ -8,7 +8,7 @@ export default function Catalog() {
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
-      fetch('http://localhost:7000/api/products')
+      fetch('https://eb99-2804-431-c7f4-db6b-4bd-a503-757b-4f47.sa.ngrok.io/api/products') //back http://localhost:7000
         .then(response => response.json())
         .then(data => setProducts(data))
     }, [])
