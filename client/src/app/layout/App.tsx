@@ -1,6 +1,11 @@
 import { Container, createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { useState } from "react";
-import Catalog from "../../features/catalog/Catalog";
+import { Route } from "react-router-dom";
+import AboutPage from "../../features/sobre/AboutPage";
+import Catalog from "../../features/produtos/Catalog";
+import ProductDetails from "../../features/produtos/ProductDetails";
+import ContactPage from "../../features/contato/ContactPage";
+import HomePage from "../../features/home/HomePage";
 import Header from "./Header";
 
 
@@ -26,7 +31,11 @@ function App() {
       <CssBaseline />
         <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
         <Container>
-          <Catalog />
+            <Route exact path='/' component={HomePage}/>
+            <Route exact path='/produtos' component={Catalog}/>
+            <Route path='/produtos/:id' component={ProductDetails}/>
+            <Route path='/sobre' component={AboutPage}/>
+            <Route path='/contato' component={ContactPage}/>
         </Container>
     </ThemeProvider>
   );
