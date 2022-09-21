@@ -7,6 +7,8 @@ import ProductDetails from "../../features/produtos/ProductDetails";
 import ContactPage from "../../features/contato/ContactPage";
 import HomePage from "../../features/home/HomePage";
 import Header from "./Header";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <ToastContainer position='bottom-right' hideProgressBar />
+
       <CssBaseline />
         <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
         <Container>
