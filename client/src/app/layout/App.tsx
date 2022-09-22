@@ -9,6 +9,7 @@ import HomePage from "../../features/home/HomePage";
 import Header from "./Header";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import ServerError from "../errors/ServerError";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path='/produtos/:id' component={ProductDetails}/>
             <Route path='/sobre' component={AboutPage}/>
             <Route path='/contato' component={ContactPage}/>
+            <Route path='/server-error' component={ServerError}/>
         </Container>
     </ThemeProvider>
   );
