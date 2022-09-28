@@ -17,7 +17,7 @@ export default function BasketSummary() {
                             <TableCell align="right">{currencyFormat(subtotal)}</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell colSpan={2}>Delivery fee*</TableCell>
+                            <TableCell colSpan={2}>Entrega de graça*</TableCell>
                             <TableCell align="right">{currencyFormat(deliveryFee)}</TableCell>
                         </TableRow>
                         <TableRow>
@@ -26,7 +26,7 @@ export default function BasketSummary() {
                         </TableRow>
                         <TableRow>
                             <TableCell>
-                                <span style={{fontStyle: 'italic'}}>*Orders over $100 qualify for free delivery</span>
+                                <span style={{fontStyle: 'italic'}}>*A cima de R$100 entrega será de graça</span>
                             </TableCell>
                         </TableRow>
                     </TableBody>

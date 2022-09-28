@@ -39,9 +39,9 @@ export default function BasketPage() {
                 <Table sx={{ minWidth: 650 }}>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Product</TableCell>
-                            <TableCell align="right">Price</TableCell>
-                            <TableCell align="center">Quantity</TableCell>
+                            <TableCell>Produto</TableCell>
+                            <TableCell align="right">Preço</TableCell>
+                            <TableCell align="center">Quantidade</TableCell>
                             <TableCell align="right">Subtotal</TableCell>
                             <TableCell align="right"></TableCell>
                         </TableRow>
@@ -58,7 +58,7 @@ export default function BasketPage() {
                                         <span>{item.name}</span>
                                     </Box>
                                 </TableCell>
-                                <TableCell align="right">${(item.price / 100).toFixed(2)}</TableCell>
+                                <TableCell align="right">R${(item.price / 100).toFixed(2)}</TableCell>
                                 <TableCell align="center">
                                     <LoadingButton
                                         loading={status.loading && status.name === 'rem' + item.productId}
@@ -76,7 +76,7 @@ export default function BasketPage() {
                                         <Add />
                                     </LoadingButton>
                                 </TableCell>
-                                <TableCell align="right">${((item.price / 100) * item.quantity).toFixed(2)}</TableCell>
+                                <TableCell align="right">R${((item.price / 100) * item.quantity).toFixed(2)}</TableCell>
                                 <TableCell align="right">
                                     <LoadingButton
                                         loading={status.loading && status.name === 'del' + item.productId}
@@ -102,7 +102,7 @@ export default function BasketPage() {
                         size='large'
                         fullWidth
                     >
-                        Checkout
+                        Comprar
                     </Button>
                 </Grid>
             </Grid>

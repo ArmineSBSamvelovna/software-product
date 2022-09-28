@@ -56,7 +56,7 @@ export default function ProductCard({product}: Props) {
                     loading={loading}
                     onClick={() => handleAddItem(product.id)}
                     size="small">
-                    Add to cart
+                    Adicionar
                 </LoadingButton>
                 <Button component={Link} to={`/produtos/${product.id}`} size="small" sx={{ color: 'primary.main' }}>Visualizar</Button>
             </CardActions>

@@ -59,28 +59,28 @@ export default function ProductDetails() {
             <Grid item xs={6}>
                 <Typography variant='h3'>{product.name}</Typography>
                 <Divider sx={{mb: 2}} />
-                <Typography variant='h4' color='secondary'>${(product.price / 100).toFixed(2)}</Typography>
+                <Typography variant='h4' color='secondary'>R${(product.price / 100).toFixed(2)}</Typography>
                 <TableContainer>
                     <Table>
                         <TableBody>
                             <TableRow>
-                                <TableCell>Name</TableCell>
+                                <TableCell>Nome</TableCell>
                                 <TableCell>{product.name}</TableCell>
                             </TableRow>    
                             <TableRow>
-                                <TableCell>Description</TableCell>
+                                <TableCell>Descrição</TableCell>
                                 <TableCell>{product.description}</TableCell>
                             </TableRow>  
                             <TableRow>
-                                <TableCell>Type</TableCell>
+                                <TableCell>Tipo</TableCell>
                                 <TableCell>{product.type}</TableCell>
                             </TableRow>  
                             <TableRow>
-                                <TableCell>Brand</TableCell>
+                                <TableCell>Marca</TableCell>
                                 <TableCell>{product.brand}</TableCell>
                             </TableRow>  
                             <TableRow>
-                                <TableCell>Quantity in stock</TableCell>
+                                <TableCell>Quantidade no Estoque</TableCell>
                                 <TableCell>{product.quantityInStock}</TableCell>
                             </TableRow>  
                         </TableBody>
@@ -91,7 +91,7 @@ export default function ProductDetails() {
                         <TextField 
                             variant='outlined'
                             type='number'
-                            label='Quantity in Cart'
+                            label='Quantidade'
                             fullWidth
                             value={quantity}
                             onChange={handleInputChange}
@@ -100,7 +100,6 @@ export default function ProductDetails() {
                     <Grid item xs={6}>
                         <LoadingButton
                             disabled={item?.quantity === quantity}
-                            loading={status.includes('pending')}
                             onClick={handleUpdateCart}
                             sx={{height: '55px'}}
                             color='primary'
@@ -108,7 +107,7 @@ export default function ProductDetails() {
                             variant='contained'
                             fullWidth
                         >
-                            {item ? 'Update Quantity' : 'Add to Cart'}
+                            {item ? 'Atualizar' : 'Adicionar'}
                         </LoadingButton>
                     </Grid>
                 </Grid>
