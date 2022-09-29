@@ -9,55 +9,44 @@ interface Props {
 }
 
 const midLinks = [
-    {title: 'produtos', path: '/produtos'},
-    {title: 'sobre', path: '/sobre'},
-    {title: 'contato', path: '/contato'},
+    { title: 'produtos', path: '/catalog' },
+    { title: 'sobre', path: '/about' },
+    { title: 'contato', path: '/contact' }
 ]
 
 const rightLinks = [
-    {title: 'login', path: '/login'},
-    {title: 'cadastro', path: '/cadastro'},
+    { title: 'login', path: '/login' },
+    { title: 'cadastro', path: '/register' }
 ]
 
 const navStyles = {
-        color: 'inherit',
-        textDecoration: 'none', 
-        typography: 'h6', 
-        '&:hover': {
-            color: 'text.secondary'
-        },
-        '&.active': {
-            color: 'grey.500'
-        }
+    color: 'inherit',
+    textDecoration: 'none',
+    typography: 'h6',
+    '&:hover': {
+        color: 'grey.500'
+    },
+    '&.active': {
+        color: 'text.secondary'
+    }
 }
 
-export default function Header({darkMode, handleThemeChange}: Props) {
+export default function Header({ darkMode, handleThemeChange }: Props) {
     const {basket} = useStoreContext();
     const itemCount = basket?.items.reduce((sum, item) => sum + item.quantity, 0)
 
     return (
         <AppBar position='static' sx={{ mb: 4 }}>
-            <Toolbar sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-               
-
-                <Box display='flex' sx={{alignItems:'center'}}>
-                    <img src="../images/logo.svg" className="App-logo" alt="logo" />
-                    <Typography 
-                        variant='h6' 
-                        component={NavLink} 
-                        to='/' 
-                        exact
-                        sx={navStyles}
-                    >
-                        LITTLE STORE
+            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Box display='flex' alignItems='center'>
+                    <Typography variant='h6' component={NavLink} exact to='/'
+                        sx={navStyles}>
+                        RE-STORE
                     </Typography>
-                    <Switch checked={darkMode} onChange={handleThemeChange}/>
+                    <Switch checked={darkMode} onChange={handleThemeChange} />
                 </Box>
-
-                
-
-                <List sx={{display: 'flex'}}>
-                    {midLinks.map(({title, path}) => (
+                <List sx={{ display: 'flex' }}>
+                    {midLinks.map(({ title, path }) => (
                         <ListItem
                             component={NavLink}
                             to={path}
@@ -68,15 +57,14 @@ export default function Header({darkMode, handleThemeChange}: Props) {
                         </ListItem>
                     ))}
                 </List>
-
-                <Box display='flex' sx={{alignItems:'center'}}>
+                <Box display='flex' alignItems='center'>
                     <IconButton component={Link} to='/basket' size='large' sx={{ color: 'inherit' }}>
                         <Badge badgeContent={itemCount} color='secondary'>
                             <ShoppingCart />
                         </Badge>
                     </IconButton>
-                    <List sx={{display: 'flex'}}>
-                        {rightLinks.map(({title, path}) => (
+                    <List sx={{ display: 'flex' }}>
+                        {rightLinks.map(({ title, path }) => (
                             <ListItem
                                 component={NavLink}
                                 to={path}

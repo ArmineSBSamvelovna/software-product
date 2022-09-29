@@ -8,12 +8,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace API.Controllers
 {
     public class BasketController : BaseApiController
     {
-         private readonly StoreContext _context;
+        private readonly StoreContext _context;
         public BasketController(StoreContext context)
         {
             _context = context;
@@ -25,7 +24,7 @@ namespace API.Controllers
             var basket = await RetrieveBasket();
 
             if (basket == null) return NotFound();
-
+            
             return MapBasketToDto(basket);
         }
 
@@ -39,9 +38,9 @@ namespace API.Controllers
             var product = await _context.Products.FindAsync(productId);
 
             if (product == null) return NotFound();
-
+            
             basket.AddItem(product, quantity);
-
+            
             var result = await _context.SaveChangesAsync() > 0;
 
             if (result) return CreatedAtRoute("GetBasket", MapBasketToDto(basket));

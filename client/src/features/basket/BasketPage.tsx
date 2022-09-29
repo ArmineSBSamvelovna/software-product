@@ -31,7 +31,7 @@ export default function BasketPage() {
             .finally(() => setStatus({ loading: false, name: '' }));
     }
 
-    if (!basket) return <Typography variant='h3'>Your basket is empty</Typography>
+    if (!basket) return <Typography variant='h3'>A sua cesta está vazia</Typography>
 
     return (
         <>
@@ -58,7 +58,7 @@ export default function BasketPage() {
                                         <span>{item.name}</span>
                                     </Box>
                                 </TableCell>
-                                <TableCell align="right">R${(item.price / 100).toFixed(2)}</TableCell>
+                                <TableCell align="right">R${(item.price)}</TableCell>
                                 <TableCell align="center">
                                     <LoadingButton
                                         loading={status.loading && status.name === 'rem' + item.productId}
@@ -76,7 +76,7 @@ export default function BasketPage() {
                                         <Add />
                                     </LoadingButton>
                                 </TableCell>
-                                <TableCell align="right">R${((item.price / 100) * item.quantity).toFixed(2)}</TableCell>
+                                <TableCell align="right">R${((item.price) * item.quantity)}</TableCell>
                                 <TableCell align="right">
                                     <LoadingButton
                                         loading={status.loading && status.name === 'del' + item.productId}
@@ -102,7 +102,7 @@ export default function BasketPage() {
                         size='large'
                         fullWidth
                     >
-                        Comprar
+                        Finalizar a Compra
                     </Button>
                 </Grid>
             </Grid>

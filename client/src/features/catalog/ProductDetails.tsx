@@ -1,12 +1,12 @@
 import { LoadingButton } from "@mui/lab";
 import { Divider, Grid, Table, TableBody, TableCell, TableContainer, TableRow, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import agent from "../../app/api/agent";
+import { useStoreContext } from "../../app/context/StoreContext";
 import NotFound from "../../app/errors/NotFound";
 import LoadingComponent from "../../app/layout/LoadingComponent";
 import { Product } from "../../app/models/product";
-import { useStoreContext } from "../../app/context/StoreContext";
 
 export default function ProductDetails() {
     const {basket, setBasket, removeItem} = useStoreContext();
@@ -18,6 +18,7 @@ export default function ProductDetails() {
     const item = basket?.items.find(i => i.productId === product?.id);
 
     useEffect(() => {
+        if (item) setQuantity(item.quantity);
         agent.Catalog.details(parseInt(id))
             .then(response => setProduct(response))
             .catch(error => console.log(error))
@@ -47,7 +48,7 @@ export default function ProductDetails() {
         }
     }
 
-    if (loading) return <LoadingComponent message='Carregando os Produtos...' />
+    if (loading) return <LoadingComponent message='Carregando os produtos...' />
 
     if (!product) return <NotFound />
 
@@ -59,7 +60,7 @@ export default function ProductDetails() {
             <Grid item xs={6}>
                 <Typography variant='h3'>{product.name}</Typography>
                 <Divider sx={{mb: 2}} />
-                <Typography variant='h4' color='secondary'>R${(product.price / 100).toFixed(2)}</Typography>
+                <Typography variant='h4' color='secondary'>R${(product.price).toFixed(2)}</Typography>
                 <TableContainer>
                     <Table>
                         <TableBody>
@@ -80,7 +81,7 @@ export default function ProductDetails() {
                                 <TableCell>{product.brand}</TableCell>
                             </TableRow>  
                             <TableRow>
-                                <TableCell>Quantidade no Estoque</TableCell>
+                                <TableCell>Quantidade no estoque</TableCell>
                                 <TableCell>{product.quantityInStock}</TableCell>
                             </TableRow>  
                         </TableBody>
@@ -91,7 +92,7 @@ export default function ProductDetails() {
                         <TextField 
                             variant='outlined'
                             type='number'
-                            label='Quantidade'
+                            label='Quantidade Adicionado'
                             fullWidth
                             value={quantity}
                             onChange={handleInputChange}
@@ -100,6 +101,7 @@ export default function ProductDetails() {
                     <Grid item xs={6}>
                         <LoadingButton
                             disabled={item?.quantity === quantity}
+                            loading={submitting}
                             onClick={handleUpdateCart}
                             sx={{height: '55px'}}
                             color='primary'
@@ -114,5 +116,4 @@ export default function ProductDetails() {
             </Grid>
         </Grid>
     )
-    
 }
