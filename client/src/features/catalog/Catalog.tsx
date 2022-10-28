@@ -10,9 +10,9 @@ import RadioButtonGroup from "../../app/components/RadioButtonGroup";
 import ProductSearch from "./ProductSearch";
 
 const sortOptions = [
-    { value: 'name', label: 'Alphabetical' },
-    { value: 'priceDesc', label: 'Price - High to low' },
-    { value: 'price', label: 'Price - Low to high' },
+    { value: 'name', label: 'Busca Pela Ordem Alfabetica' },
+    { value: 'priceDesc', label: 'Preço - De Maior para Menor' },
+    { value: 'price', label: 'Preço - De Menor para Maior' },
 ]
 
 export default function Catalog() {
@@ -28,7 +28,7 @@ export default function Catalog() {
         if (!filtersLoaded) dispatch(fetchFilters());
     }, [filtersLoaded, dispatch]);
 
-    if (!filtersLoaded) return <LoadingComponent message='Loading products...' />
+    if (!filtersLoaded) return <LoadingComponent message='Carregando os produtos..' />
 
     return (
         <Grid container columnSpacing={4}>

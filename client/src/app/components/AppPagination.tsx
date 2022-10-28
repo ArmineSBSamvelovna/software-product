@@ -12,10 +12,10 @@ export default function AppPagination({metaData, onPageChange}: Props) {
     return (
         <Box display='flex' justifyContent='space-between' alignItems='center'>
             <Typography>
-                Displaying {(currentPage-1)*pageSize+1}-
+                Demostarndo{(currentPage-1)*pageSize+1}-
                 {currentPage*pageSize > totalCount 
                     ? totalCount 
-                    : currentPage*pageSize} of {totalCount} items
+                    : currentPage*pageSize} de {totalCount} items
             </Typography>
             <Pagination
                 color='secondary'
